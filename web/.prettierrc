@@ -1,0 +1,21 @@
+{
+  "singleQuote": false,
+  "useTabs": false,
+  "bracketSameLine": true,
+  "printWidth": 80,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^(react|react-dom|next|@types/react|@types/react-dom)",
+    "<THIRD_PARTY_MODULES>",
+    "^@taskflow/",
+    "^@/app",
+    "^@/domains",
+    "^@/services",
+    "^@/store",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
