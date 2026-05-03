@@ -1,0 +1,33 @@
+{
+  "name": "@taskflow/storybook",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Storybook for the TaskFlow demo design system",
+  "type": "module",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
+    "build": "storybook build",
+    "build-storybook": "storybook build --output-dir ./storybook-static"
+  },
+  "dependencies": {
+    "@taskflow/components": "workspace:*",
+    "@taskflow/themes": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.5.0",
+    "@storybook/addon-interactions": "^8.5.0",
+    "@storybook/addon-links": "^8.5.0",
+    "@storybook/blocks": "^8.5.0",
+    "@storybook/react": "^8.5.0",
+    "@storybook/react-vite": "^8.5.0",
+    "@storybook/test": "^8.5.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "storybook": "^8.5.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  }
+}
