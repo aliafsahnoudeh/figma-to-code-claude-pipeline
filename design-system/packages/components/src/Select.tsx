@@ -103,7 +103,7 @@ export interface SelectProps {
 /**
  * Select component with curated API
  *
- * Wraps MUI Select with DS-specific props and behavior.
+ * Wraps MUI Select with Design System-specific props and behavior.
  * Sizing and styling are driven by design tokens via theme overrides.
  *
  * @example

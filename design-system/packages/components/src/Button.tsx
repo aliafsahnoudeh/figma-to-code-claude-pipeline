@@ -86,7 +86,7 @@ export interface ButtonProps {
 /**
  * Button component with curated API
  *
- * Wraps MUI Button with DS-specific props and behavior.
+ * Wraps MUI Button with Design System-specific props and behavior.
  * Sizing and styling are driven by design tokens via theme overrides.
  *
  * @example

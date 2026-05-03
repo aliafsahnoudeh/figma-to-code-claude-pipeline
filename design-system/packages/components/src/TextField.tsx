@@ -116,7 +116,7 @@ export interface TextFieldProps {
 /**
  * TextField component with curated API
  *
- * Wraps MUI TextField with DS-specific props and behavior.
+ * Wraps MUI TextField with Design System-specific props and behavior.
  * Sizing and styling are driven by design tokens via theme overrides.
  *
  * @example

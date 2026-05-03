@@ -82,7 +82,7 @@ export interface IconButtonProps {
 /**
  * IconButton component with curated API
  *
- * Wraps MUI IconButton with DS-specific props and behavior.
+ * Wraps MUI IconButton with Design System-specific props and behavior.
  * Used for icon-only clickable buttons.
  *
  * @example

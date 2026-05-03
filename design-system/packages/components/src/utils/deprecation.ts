@@ -3,7 +3,7 @@
  */
 export function logDeprecationWarning(componentName: string, message: string): void {
   if (process.env.NODE_ENV === 'development') {
-    console.warn(`[DS Deprecation] ${componentName}: ${message}`);
+    console.warn(`[Design System Deprecation] ${componentName}: ${message}`);
   }
 }
 

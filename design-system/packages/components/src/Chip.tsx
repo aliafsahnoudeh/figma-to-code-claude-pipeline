@@ -89,7 +89,7 @@ export interface ChipProps {
 /**
  * Chip component with curated API
  *
- * Wraps MUI Chip with DS-specific props and behavior.
+ * Wraps MUI Chip with Design System-specific props and behavior.
  * Used for tags, filters, compact information, and selections.
  *
  * @example

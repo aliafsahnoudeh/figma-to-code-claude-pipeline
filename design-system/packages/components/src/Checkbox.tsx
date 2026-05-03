@@ -98,7 +98,7 @@ export interface CheckboxProps {
 /**
  * Checkbox component with curated API
  *
- * Wraps MUI Checkbox with DS-specific props and behavior.
+ * Wraps MUI Checkbox with Design System-specific props and behavior.
  * Includes integrated FormControlLabel for easy label support.
  *
  * @example

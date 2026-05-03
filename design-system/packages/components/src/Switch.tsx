@@ -99,7 +99,7 @@ export interface SwitchProps {
 /**
  * Switch component with curated API
  *
- * Wraps MUI Switch with DS-specific props and behavior.
+ * Wraps MUI Switch with Design System-specific props and behavior.
  * Includes integrated FormControlLabel for easy label support.
  *
  * @example

@@ -117,7 +117,7 @@ export interface RadioGroupProps {
 /**
  * RadioGroup component with curated API
  *
- * Wraps MUI RadioGroup with DS-specific props and behavior.
+ * Wraps MUI RadioGroup with Design System-specific props and behavior.
  * Automatically renders Radio buttons from options array.
  *
  * @example

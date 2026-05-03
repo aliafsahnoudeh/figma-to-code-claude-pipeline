@@ -71,7 +71,7 @@ export interface AlertProps {
 /**
  * Alert component with curated API
  *
- * Wraps MUI Alert with DS-specific props and behavior.
+ * Wraps MUI Alert with Design System-specific props and behavior.
  * Displays important messages with optional close functionality.
  *
  * @example

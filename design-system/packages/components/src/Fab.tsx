@@ -75,7 +75,7 @@ export interface FabProps {
 /**
  * Fab (Floating Action Button) component with curated API
  *
- * Wraps MUI Fab with DS-specific props and behavior.
+ * Wraps MUI Fab with Design System-specific props and behavior.
  * Used for primary actions that float above the content.
  *
  * @example
