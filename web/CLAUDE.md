@@ -17,8 +17,8 @@ All UI components must use `@taskflow/components` and `@taskflow/themes`. Check 
 
 - Direct imports from `@mui/*` — always go through `@taskflow/components`
 - Hardcoded `#xxx`, `rgb(...)`, `hsl(...)` color values in `sx` / styles
-- Hand-rolled buttons / inputs / dialogs / dropdowns / tooltips — use the DS
-- Bypassing the design system for "quick" solutions
+- Hand-rolled buttons / inputs / dialogs / dropdowns / tooltips — use the Design System
+- Bypassing the Design System for "quick" solutions
 
 ### Colors — token table
 
@@ -58,7 +58,7 @@ Exception: `rgba()` for transparency in `box-shadow` / opacity overlays where no
 
 ```
 src/domains/
-├── {domain}/components/   # thin UI, wrap design system components
+├── {domain}/components/   # thin UI, wrap Design System components
 ├── {domain}/services/     # hooks + business logic
 └── {domain}/types/        # TypeScript types
 ```

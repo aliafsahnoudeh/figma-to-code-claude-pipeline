@@ -6,11 +6,11 @@ easy to read end to end:
 
 - A tiny **FastAPI** backend with in-memory data — no database, no auth.
 - A **Next.js 16 + React 19** frontend that calls the backend.
-- A **token-driven MUI wrapper design system** (`@taskflow/components`, `@taskflow/themes`).
+- A **token-driven MUI wrapper Design System** (`@taskflow/components`, `@taskflow/themes`).
 - A **`.claude/` directory** with the agents, hooks, skills, and settings template that
   drive the AI pipeline.
 
-The point of the repo is not the app itself — it's the **way the design system, MCP
+The point of the repo is not the app itself — it's the **way the Design System, MCP
 servers, agents, and hooks compose into a reliable Figma-to-code workflow**.
 
 The long-form write-up lives in
@@ -35,9 +35,9 @@ context based on which sub-project you're working in:
 | File                                               | Scope                                                      |
 | -------------------------------------------------- | ---------------------------------------------------------- |
 | [CLAUDE.md](CLAUDE.md)                             | repo-wide commands, MCP install, git conventions           |
-| [web/CLAUDE.md](web/CLAUDE.md)                     | frontend rules: DS imports, tokens, visual verify          |
+| [web/CLAUDE.md](web/CLAUDE.md)                     | frontend rules: Design System imports, tokens, visual verify          |
 | [backend/CLAUDE.md](backend/CLAUDE.md)             | backend rules: async, Pydantic, in-memory store            |
-| [design-system/CLAUDE.md](design-system/CLAUDE.md) | DS rules: token schema, wrapper pattern, 8 non-negotiables |
+| [design-system/CLAUDE.md](design-system/CLAUDE.md) | Design System rules: token schema, wrapper pattern, 8 non-negotiables |
 
 ## Setup
 
