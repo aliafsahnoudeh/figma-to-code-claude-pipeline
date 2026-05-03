@@ -44,7 +44,7 @@ export const {Component} = forwardRef<HTML{Element}Element, {Component}Props>(
 Rules:
 
 - Always wrap MUI — never build from scratch
-- Never prefix exports (e.g. `Button`, not `DSButton`)
+- Never prefix exports (e.g. `Button`, not `MyButton` or any other vendor-style prefix)
 - Curate the API — cherry-pick only what's needed
 - Use `React.forwardRef` for DOM access
 - Add `sx?: SxProps<Theme>` as an escape hatch

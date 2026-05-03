@@ -46,7 +46,7 @@ Build via `tsup` (ESM + CJS + DTS). React and MUI are externalised. Both package
 
 ## Non-negotiable rules
 
-1. **Never prefix components** — export `Button`, not `DSButton`
+1. **Never prefix components** — export `Button`, not `MyButton` or any other vendor-style prefix
 2. **Always wrap MUI** — never build from scratch; always wrap `@mui/material`
 3. **Curate the API** — expose only the props you need, no `{ ...rest }` pass-through
 4. **Token-driven styling** — sizing and colors come from theme tokens / MUI overrides, not hardcoded values or inline styles

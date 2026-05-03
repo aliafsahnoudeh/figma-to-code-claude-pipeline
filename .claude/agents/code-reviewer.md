@@ -40,7 +40,7 @@ You are a code reviewer for the TaskFlow demo monorepo. Review the current chang
 ## Design system rules (`design-system/`)
 
 - Always wrap MUI — never build from scratch
-- Never prefix exports (`Button`, not `DSButton`)
+- Never prefix exports (`Button`, not `MyButton` or any other vendor-style prefix)
 - Curate the API — no `{ ...rest }` pass-through
 - Token-driven sizing / colors only
 - TypeScript strict, named exports only
