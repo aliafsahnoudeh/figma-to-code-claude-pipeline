@@ -1,0 +1,13 @@
+node_modules
+dist
+build
+coverage
+.next
+.turbo
+*.min.js
+pnpm-lock.yaml
+
+# AI-specific documentation files
+AGENTS.md
+CLAUDE.md
+README.md
