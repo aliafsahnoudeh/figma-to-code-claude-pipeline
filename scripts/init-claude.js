@@ -1,49 +1,12 @@
 import fs from "fs";
 import os from "os";
 import path from "path";
-import net from "net";
-import { URL } from "url";
 
 const pwd = process.cwd();
 const home = os.homedir();
 const templatePath = path.join(".claude", "settings.example.json");
 const outputPath = path.join(".claude", "settings.local.json");
 const dashboardDir = path.join(".claude", "dashboard");
-
-// Check if a TCP port is reachable within the given timeout
-function checkPort(host, port, timeout = 2000) {
-  return new Promise((resolve) => {
-    const socket = new net.Socket();
-    let resolved = false;
-    const done = (result) => {
-      if (!resolved) {
-        resolved = true;
-        socket.destroy();
-        resolve(result);
-      }
-    };
-    socket.setTimeout(timeout);
-    socket.on("connect", () => done(true));
-    socket.on("timeout", () => done(false));
-    socket.on("error", () => done(false));
-    socket.connect(port, host);
-  });
-}
-
-// Extract host and port from a postgresql:// URL inside an args array
-function parsePostgresEndpoint(args) {
-  const urlArg = (args ?? []).find((a) => a.startsWith("postgresql://"));
-  if (!urlArg) return null;
-  try {
-    const parsed = new URL(urlArg);
-    return {
-      host: parsed.hostname || "localhost",
-      port: parseInt(parsed.port || "5432", 10),
-    };
-  } catch {
-    return null;
-  }
-}
 
 async function main() {
   // Read template
@@ -100,38 +63,20 @@ async function main() {
     allow: [...new Set([...existingAllow, ...templateAllow])],
   };
 
-  // Conditionally apply MCP servers based on database reachability
+  // Merge MCP servers from template (skip any already configured by the user)
   const templateMcp = template.mcpServers ?? {};
   result.mcpServers = { ...(existing.mcpServers ?? {}) };
 
   if (Object.keys(templateMcp).length > 0) {
-    console.log("\n🔌 Checking database connectivity for MCP servers...");
+    console.log("\n🔌 Configuring MCP servers...");
 
     for (const [name, config] of Object.entries(templateMcp)) {
       if (name in (existing.mcpServers ?? {})) {
         console.log(`   ✓ ${name}: already configured — skipping`);
         continue;
       }
-
-      const endpoint = parsePostgresEndpoint(config.args);
-      if (!endpoint) {
-        result.mcpServers[name] = config;
-        console.log(`   ✅ ${name}: added`);
-        continue;
-      }
-
-      const reachable = await checkPort(endpoint.host, endpoint.port);
-      if (reachable) {
-        result.mcpServers[name] = config;
-        console.log(
-          `   ✅ ${name}: database reachable at ${endpoint.host}:${endpoint.port} — added`,
-        );
-      } else {
-        console.log(
-          `   ⏭️  ${name}: database not reachable at ${endpoint.host}:${endpoint.port} — skipped`,
-        );
-        console.log(`      Re-run this script once the database is running`);
-      }
+      result.mcpServers[name] = config;
+      console.log(`   ✅ ${name}: added`);
     }
   }
 
