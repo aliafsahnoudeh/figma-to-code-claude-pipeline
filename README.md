@@ -1,6 +1,6 @@
 # Figma → Code with Claude Code — TaskFlow demo
 
-This repository is a public artifact accompanying the Medium post(s) on building a
+This repository is a public artifact accompanying the [Medium post(s)](https://medium.com/@aliafsah1988/how-to-turn-claude-code-into-a-figma-to-react-pipeline-that-visually-verifies-its-own-work-030246f600a9) on building a
 Figma-to-code pipeline with Claude Code. It deliberately stays small so the pattern is
 easy to read end to end:
 
@@ -32,11 +32,11 @@ scripts/          init-claude.js bootstrap
 There are four CLAUDE.md files, scoped per directory — they are auto-loaded into Claude's
 context based on which sub-project you're working in:
 
-| File                                               | Scope                                                      |
-| -------------------------------------------------- | ---------------------------------------------------------- |
-| [CLAUDE.md](CLAUDE.md)                             | repo-wide commands, MCP install, git conventions           |
+| File                                               | Scope                                                                 |
+| -------------------------------------------------- | --------------------------------------------------------------------- |
+| [CLAUDE.md](CLAUDE.md)                             | repo-wide commands, MCP install, git conventions                      |
 | [web/CLAUDE.md](web/CLAUDE.md)                     | frontend rules: Design System imports, tokens, visual verify          |
-| [backend/CLAUDE.md](backend/CLAUDE.md)             | backend rules: async, Pydantic, in-memory store            |
+| [backend/CLAUDE.md](backend/CLAUDE.md)             | backend rules: async, Pydantic, in-memory store                       |
 | [design-system/CLAUDE.md](design-system/CLAUDE.md) | Design System rules: token schema, wrapper pattern, 8 non-negotiables |
 
 ## Setup
