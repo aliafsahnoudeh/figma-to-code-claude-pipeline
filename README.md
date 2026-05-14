@@ -1,6 +1,6 @@
 # Figma → Code with Claude Code — TaskFlow demo
 
-This repository is a public artifact accompanying the [Medium post(s)](https://medium.com/@aliafsah1988/how-to-turn-claude-code-into-a-figma-to-react-pipeline-that-visually-verifies-its-own-work-030246f600a9) on building a
+This repository is a public artifact accompanying the Medium posts ([here](https://medium.com/@aliafsah1988/how-to-turn-claude-code-into-a-figma-to-react-pipeline-that-visually-verifies-its-own-work-030246f600a9) and [here](https://medium.com/@aliafsah1988/your-ai-coding-agent-is-only-as-good-as-your-design-system-6055e4667fa9)) on building a
 Figma-to-code pipeline with Claude Code. It deliberately stays small so the pattern is
 easy to read end to end:
 
